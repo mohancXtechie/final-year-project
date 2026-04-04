@@ -1,74 +1,58 @@
-
+cat > .gitignore << 'EOF'
+# Credentials
 .env
 
-
+# Dataset processed outputs
 dataset/processed/
+dataset/*.csv
 
-
+# Trained models
 models/
 
+# Evidence packages
+evidence_packages/
 
+# Python
 __pycache__/
 *.py[cod]
-*$py.class
 *.pyo
 .Python
 *.egg
 *.egg-info/
 dist/
 build/
-eggs/
-parts/
-var/
-sdist/
-develop-eggs/
-.installed.cfg
-lib/
-lib64/
 
-
+# Virtual environments
 venv/
 env/
 ENV/
 .venv/
-.env/
 
-
+# Jupyter
 .ipynb_checkpoints
 *.ipynb
 
-
+# IDE
 .vscode/
 .idea/
 *.swp
-*.swo
 *~
 .DS_Store
 Thumbs.db
 
-
+# TensorFlow
 *.h5
 *.keras
 *.pb
-saved_model/
 
-
+# Logs
 *.log
 logs/
 
-
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-
+# Streamlit
 .streamlit/
 
-
+# Pytest
 .pytest_cache/
 .coverage
-htmlcov/dataset/*.csv
+EOF
